@@ -1,0 +1,29 @@
+body {
+  background-color: black;
+}
+.main {
+  height: 100vh !important;
+  background-image: radial-gradient(
+      circle at center,
+      rgba(0, 14, 59, 0.5),
+      rgba(0, 0, 67, 0.5)
+    ),
+    url(../images/blue_gradient_bg.jpg);
+}
+.login-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+input::placeholder {
+  color: #a9a9a9 !important;
+  font-weight: 200;
+}
+.text-small {
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+button {
+  background-color: rgb(0, 18, 76) !important;
+  border: none !important;
+}

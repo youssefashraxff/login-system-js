@@ -13,9 +13,50 @@
     />
     <!-- Style CSS Link -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-    n
   </head>
   <body>
+    <div
+      class="main d-flex flex-column align-items-center justify-content-center"
+    >
+      <!-- Login Card -->
+      <div
+        class="login-container d-flex flex-column justify-content-center align-items-center w-50 p-5 rounded-5"
+      >
+        <!-- Card Title -->
+        <h1 class="text-white">Login System</h1>
+        <!-- Input Section -->
+        <div
+          class="input-container w-50 mt-4 d-flex flex-column align-items-center justify-content-center"
+        >
+          <!-- Email Input -->
+          <div class="email-input w-100 mb-3">
+            <label for="email" class="form-label text-white"
+              >Email Address
+            </label>
+            <input
+              type="text"
+              id="email"
+              class="form-control"
+              placeholder="username@example.com"
+            />
+          </div>
+          <!-- Password Input -->
+          <div class="password-input w-100">
+            <label for="password" class="form-label text-white">Password</label>
+            <input
+              type="password"
+              id="password"
+              class="form-control mb-2"
+              placeholder="8 characters at least"
+            />
+          </div>
+          <button class="btn btn-primary w-100 mt-4 mb-1">Login</button>
+          <p class="text-white text-small">
+            Create new account? <a href="" class="text-white">Sign up</a>
+          </p>
+        </div>
+      </div>
+    </div>
     <!-- Bootstrap Script -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
