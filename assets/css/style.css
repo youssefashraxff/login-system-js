@@ -9,6 +9,8 @@ body {
       rgba(0, 0, 67, 0.5)
     ),
     url(../images/blue_gradient_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .login-container {
   background: rgba(255, 255, 255, 0.1);
@@ -17,6 +19,7 @@ body {
 }
 input::placeholder {
   color: #a9a9a9 !important;
+  font-size: 0.9rem;
   font-weight: 200;
 }
 .text-small {

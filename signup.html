@@ -23,46 +23,68 @@
             class="login-container d-flex flex-column justify-content-center align-items-center py-5 rounded-5"
           >
             <!-- Card Title -->
-            <h1 class="text-white">Login</h1>
+            <h1 class="text-white">Sign up</h1>
             <!-- Input Section -->
             <div
               class="input-container w-100 px-5 mt-4 d-flex flex-column align-items-center justify-content-center"
             >
+              <!-- Name Input -->
+              <div class="name-input mb-3 w-100">
+                <label for="signup-name" class="form-label text-white"
+                  >Full name
+                </label>
+                <input
+                  type="text"
+                  id="signup-name"
+                  class="form-control"
+                  placeholder="Full name"
+                />
+                <small id="name-error" class="text-danger d-none"
+                  >Full name is invalid.</small
+                >
+              </div>
               <!-- Email Input -->
               <div class="email-input mb-3 w-100">
-                <label for="login-email" class="form-label text-white"
+                <label for="signup-email" class="form-label text-white"
                   >Email Address
                 </label>
                 <input
                   type="text"
-                  id="login-email"
+                  id="signup-email"
                   class="form-control"
                   placeholder="username@example.com"
                 />
+                <small id="email-error" class="text-danger d-none"></small>
               </div>
               <!-- Password Input -->
               <div class="password-input w-100">
-                <label for="login-password" class="form-label text-white"
+                <label for="signup-password" class="form-label text-white"
                   >Password</label
                 >
                 <input
                   type="password"
-                  id="login-password"
+                  id="signup-password"
                   class="form-control mb-2"
                   placeholder="8 characters at least"
                 />
+                <small id="password-error" class="text-danger d-none"
+                  >Password must be 8 characters at least.</small
+                >
               </div>
-              <!-- Login Button -->
+              <small id="empty-error" class="text-danger d-none"
+                >Invalid, enter full name, email and password.</small
+              >
+              <!-- signup Button -->
               <button
-                onclick="onLoginClicked()"
+                onclick="onSignupClicked()"
                 class="btn btn-primary mt-4 mb-1 w-100"
               >
-                Login
+                Sign up
               </button>
               <!-- Create new account -->
               <p class="text-white text-small">
-                Create new account?
-                <a href="signup.html" class="text-white">Sign up</a>
+                Already have an account?
+                <a href="index.html" class="text-white">Login</a>
               </p>
             </div>
           </div>
