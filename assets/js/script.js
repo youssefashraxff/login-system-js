@@ -43,11 +43,20 @@ function onLoginClicked() {
     return;
   }
   console.log("logged in");
+
   location.href = "home.html";
 }
 
+function onTypingLoginEmail() {
+  emailError.innerHTML = "";
+}
+
+function onTypingLoginPassword() {
+  passwordError.innerHTML = "";
+}
+
 function onSignupClicked() {
-  resetErrorClass();
+  resetErrorClass(true);
   // Check if any inputs are empty
   if (!checkEmptyInputs(true)) {
     emptyError.classList.remove("d-none");
@@ -70,7 +79,7 @@ function onSignupClicked() {
     return;
   }
 
-  if (checkIfEmailExist()) {
+  if (checkIfEmailExist(true)) {
     emailError.innerHTML = "Email already exists.";
     emailError.classList.remove("d-none");
     return;
@@ -89,11 +98,13 @@ function signUp() {
   allAccounts.push(account);
   saveLocalStorage(allAccounts);
 }
-function resetErrorClass() {
-  //   nameError.classList.add("d-none");
-  //   emailError.classList.add("d-none");
-  //   passwordError.classList.add("d-none");
-  //   emptyError.classList.add("d-none");
+function resetErrorClass(signUp) {
+  emailError.classList.add("d-none");
+  passwordError.classList.add("d-none");
+  emptyError.classList.add("d-none");
+  if (signUp) {
+    nameError.classList.add("d-none");
+  }
 }
 function saveLocalStorage(accounts) {
   localStorage.setItem("allAccounts", JSON.stringify(accounts));

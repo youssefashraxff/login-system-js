@@ -38,7 +38,9 @@
                   id="login-email"
                   class="form-control"
                   placeholder="username@example.com"
+                  oninput="onTypingLoginEmail()"
                 />
+                <small id="email-error" class="text-danger d-none"></small>
               </div>
               <!-- Password Input -->
               <div class="password-input w-100">
@@ -50,9 +52,14 @@
                   id="login-password"
                   class="form-control mb-2"
                   placeholder="8 characters at least"
+                  oninput="onTypingLoginPassword()"
                 />
+                <small id="password-error" class="text-danger d-none"></small>
               </div>
               <!-- Login Button -->
+              <small id="empty-error" class="text-danger d-none"
+                >Invalid, enter full name, email and password.</small
+              >
               <button
                 onclick="onLoginClicked()"
                 class="btn btn-primary mt-4 mb-1 w-100"
